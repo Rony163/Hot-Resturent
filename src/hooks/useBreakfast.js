@@ -4,7 +4,7 @@ const useBreakfast = () => {
     const [breakfast, setBreakfast] = useState([]);
 
     useEffect(() => {
-        fetch('./breakfast.json')
+        fetch('https://raw.githubusercontent.com/Rony163/Hot-Resturent/main/public/breakfast.json')
             .then(res => res.json())
             .then(data => setBreakfast(data))
     }, [])
