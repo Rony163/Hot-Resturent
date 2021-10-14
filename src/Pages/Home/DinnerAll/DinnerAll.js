@@ -1,11 +1,15 @@
 import React from 'react';
 import useDinner from '../../../hooks/useDinner';
+import Dinner from '../Dinner/Dinner';
 
 const DinnerAll = () => {
-    const [dinner, setDinner] = useDinner();
+    const [dinnerAll, setDinnerAll] = useDinner();
     return (
-        <div>
-            <h2>This is dinner {dinner.length}</h2>
+        <div className="foods-container">
+            {dinnerAll.map(dinner => <Dinner
+                key={dinner.id}
+                dinner={dinner}
+            ></Dinner>)}
         </div>
     );
 };

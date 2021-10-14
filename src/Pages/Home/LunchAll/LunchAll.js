@@ -1,11 +1,15 @@
 import React from 'react';
 import useLunch from '../../../hooks/useLunch';
+import Lunch from '../Lunch/Lunch';
 
 const LunchAll = () => {
-    const [lunch, setLunch] = useLunch();
+    const [lunchAll, setLunchAll] = useLunch();
     return (
-        <div>
-            <h1>This is lunch {lunch.length}</h1>
+        <div className="foods-container">
+            {lunchAll.map(lunch => <Lunch
+                key={lunch.id}
+                lunch={lunch}
+            ></Lunch>)}
         </div>
     );
 };

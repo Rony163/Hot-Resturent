@@ -6,7 +6,7 @@ import './BreakfastAll.css';
 const BreakfastAll = () => {
     const [breakfastAll, setBreakfastAll] = useBreakfast();
     return (
-        <div className="breakfastall-container">
+        <div className="foods-container">
             {breakfastAll.map(breakfast => <Breakfast
                 key={breakfast.id}
                 breakfast={breakfast}
