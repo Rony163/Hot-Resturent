@@ -1,0 +1,8 @@
+.food-header{
+    display: flex;
+    justify-content: center;
+}
+.f-head{
+    margin: 20px;
+    cursor: pointer;
+}
