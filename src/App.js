@@ -5,6 +5,7 @@ import DinnerDetails from './Pages/FoodDetail/DinnerDetail';
 import LunchDetails from './Pages/FoodDetail/LunchDetail';
 import Home from './Pages/Home/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
+import OrderReview from './Pages/OrderReview/OrderReview';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/detail/:foodId">
             <DinnerDetails></DinnerDetails>
+          </Route>
+          <Route path="/orderreview">
+            <OrderReview></OrderReview>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

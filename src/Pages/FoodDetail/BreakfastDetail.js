@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import useBreakfast from '../../hooks/useBreakfast';
 import './SingleDetails.css';
@@ -30,6 +30,11 @@ const BreakfastDetail = () => {
         }
 
     }
+
+    const history = useHistory();
+    const handleOrder = () => {
+        history.push('/orderreview')
+    }
     return (
         <div>
             <div className="single-food">
@@ -41,7 +46,7 @@ const BreakfastDetail = () => {
                         <input style={{ width: '30px' }} type="number" class="form-control text-center" value={count} />
                         <button onClick={handlePlus}><i class="fas fa-plus"></i></button>
                     </h3>
-                    <button><i class="fas fa-shopping-cart"></i>Add Items</button>
+                    <button onClick={handleOrder}><i class="fas fa-shopping-cart"></i>Add Items</button>
                 </div>
                 <div>
                     <img style={{ width: '400px' }} src={matchFood?.img} alt="" />
