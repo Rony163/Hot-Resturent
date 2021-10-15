@@ -3,7 +3,7 @@ import useDinner from '../../../hooks/useDinner';
 import Dinner from '../Dinner/Dinner';
 
 const DinnerAll = () => {
-    const [dinnerAll, setDinnerAll] = useDinner();
+    const [dinnerAll] = useDinner();
     return (
         <div className="foods-container">
             {dinnerAll.map(dinner => <Dinner
