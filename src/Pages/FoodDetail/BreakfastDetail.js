@@ -33,7 +33,7 @@ const BreakfastDetail = () => {
 
     const history = useHistory();
     const handleOrder = () => {
-        history.push('/orderreview')
+        history.push('/orderreview', { matchFood, count })
     }
     return (
         <div>
